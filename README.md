@@ -37,13 +37,3 @@ API uses a shared dataset without authentication.
 PostgreSQL data lives in a named volume and survives `docker compose down` followed
 by `docker compose up`. `docker compose down -v` deletes that data. Changing `.env`
 credentials does not update an already initialized database.
-
-## Tests
-
-With the containers running, execute in PowerShell:
-
-```powershell
-Get-Content -Raw tests/test_api.py | docker compose exec -T backend python -
-```
-
-The integration tests use the real API and database and remove their own records.
