@@ -1,0 +1,7 @@
+# Runtime files only.
+*
+!Dockerfile
+!requirements.txt
+!app.py
+!db.py
+!schema.sql
